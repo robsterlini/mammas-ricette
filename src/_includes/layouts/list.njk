@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+sitemap_priority: 1
+---
+
+<main class="main list">
+  <h1>{{ h1 }}</h1>
+  <ul>
+    {% for recipe in collections[recipes] %}
+      <li><a href="{{ recipe.url | url }}">{{ recipe.title }}</a></li>
+    {% endfor %}
+  </ul>
+</main>

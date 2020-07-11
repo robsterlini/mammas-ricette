@@ -1,0 +1,25 @@
+{
+  "name": "mammas-ricette",
+  "version": "1.0.0",
+  "description": "Mamma’s Ricette",
+  "scripts": {
+    "develop": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "start": "npm run develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://robsterlini@github.com/robsterlini/mammas-ricette.git"
+  },
+  "keywords": [],
+  "author": "Rob Sterlini <hi@robsterlini.co.uk> (https://robsterlini.co.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robsterlini/mammas-ricette/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7"
+  },
+  "dependencies": {}
+}

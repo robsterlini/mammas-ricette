@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+sitemap_priority: 0.8
+eleventyComputed:
+  title: "{{ recipe.title }}"
+  locale: "{{ recipe.locale }}"
+---
+{% set ingredients = recipe[locale].ingredients %}
+{% set method = recipe[locale].method %}
+
+<main class="main list">
+  <h1>{{ recipe.title }}</h1>
+  <div>
+    {{ 'firstPublished' | i18n(locale) }} {{ recipe.date | formatDate(locale) }}
+    <h2>{{ 'ingredients' | i18n(locale) }}</h2>
+    {% if ingredients %}
+      <ul>
+      {% for ingredient in ingredients %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <p>Ingredients missing</p>
+    {% endif %}
+
+    <span>*****</span>
+    <h2>{{ 'instructions' | i18n(locale) }}</h2>
+    {% if method %}
+      <ol>
+      {% for step in method %}
+        <li>{{ step }}</li>
+      {% endfor %}
+      </ol>
+    {% else %}
+      <p>Method missing</p>
+    {% endif %}
+  </div>
+</main>
